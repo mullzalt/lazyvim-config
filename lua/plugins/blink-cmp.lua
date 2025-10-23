@@ -7,8 +7,8 @@ return {
       ["<C-e>"] = { "hide", "fallback" },
       ["<CR>"] = { "accept", "fallback" },
 
-      ["<Tab>"] = { "snippet_forward", "fallback" },
-      ["<S-Tab>"] = { "snippet_backward", "fallback" },
+      ["<S-Tab>"] = { "select_prev", "fallback_to_mappings" },
+      ["<Tab>"] = { "select_next", "fallback_to_mappings" },
 
       ["<Up>"] = { "select_prev", "fallback" },
       ["<Down>"] = { "select_next", "fallback" },
@@ -19,6 +19,16 @@ return {
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
 
       ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
+    },
+    completion = {
+      ghost_text = {
+        enabled = false,
+      },
+      list = {
+        selection = {
+          preselect = false,
+        },
+      },
     },
   },
 }
